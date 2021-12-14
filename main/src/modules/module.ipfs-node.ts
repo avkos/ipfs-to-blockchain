@@ -9,7 +9,7 @@ class IpfsNode {
     }
 
     shutdown(): void {
-        // ipfs doesn't have graceful shutdown yet ((
+        // ipfs-core doesn't have graceful shutdown yet :(
         setTimeout(() => {
             process.exit(0)
         }, 5000)
