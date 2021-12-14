@@ -1,0 +1,25 @@
+{
+  "license": "MIT",
+  "devDependencies": {
+    "@typechain/truffle-v5": "^6.0.0",
+    "@types/jest": "^27.0.3",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.12",
+    "ts-generator": "^0.1.1",
+    "ts-node": "^10.4.0",
+    "typechain": "^6.0.5",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@types/chai": "^4.3.0",
+    "ganache-cli": "^6.12.2",
+    "truffle": "^5.4.24"
+  },
+  "scripts": {
+    "generate": "truffle compile && typechain --target=truffle-v5 'build/contracts/*.json' && tsc --noEmit --incremental false --composite false",
+    "clean": "rm -rf build",
+    "test": "truffle test && yarn tsc",
+    "ganache": "ganache-cli --account \"0xfd3d3f95c790034e91ba83fad6580fd641f7ea6d89712481df317a79918d82d4,1000000000000000000\" --networkId 4447",
+    "deploy": "yarn generate && truffle compile && truffle deploy"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ipfs-to-blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:avkos/ipfs-to-blockchain.git",
+  "author": "avkos",
+  "license": "MIT",
+  "scripts": {
+    "install": "echo \"Install contract deps\" && cd contract && yarn && echo \"Generate contract artifacts\" && yarn generate && echo \"Install main deps\" && cd ../main && yarn",
+    "eth": "cd ./contract && yarn ganache",
+    "contract-test": "cd ./contract && yarn test",
+    "contract-deploy": "cd ./contract && yarn deploy",
+    "main-test": "cd ./main && yarn test",
+    "start": "cd ./main && yarn upload ../README.md && cd .."
+  }
+}

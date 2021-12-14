@@ -1,0 +1,24 @@
+{
+  "name": "ipfs-to-blockchain",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:avkos/ipfs-to-blockchain.git",
+  "author": "avkos",
+  "license": "MIT",
+  "scripts": {
+    "upload": "tsc --project ./ && node src/index.js",
+    "test": "tsc --project ./ && mocha"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.11.12",
+    "ipfs-core-types": "^0.8.4"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "ipfs-core": "^0.12.2",
+    "mocha": "^9.1.3",
+    "web3": "^1.6.1"
+  }
+}
