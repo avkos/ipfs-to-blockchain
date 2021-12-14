@@ -1,6 +1,6 @@
 # ipfs-to-blockchain
 
-You can see how it works here - https://youtu.be/dqnKOyhdsxY
+You can see how it works here - https://youtu.be/dqnKOyhdsxY (set speed x2)
 
 #Steps
 
