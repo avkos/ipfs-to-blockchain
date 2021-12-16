@@ -5,10 +5,10 @@ import File from '../src/modules/module.file'
 
 describe('Load file', function () {
     it('should return file data', function () {
-        const file = new File('.gitignore')
+        const file = new File('./test/test.file')
         const data = file.getFileData()
 
-        assert.equal('node_modules\n', data.toString());
+        assert.equal('some text\n', data.toString());
     });
     it('should return error', function () {
         const file = new File('not_exists')
